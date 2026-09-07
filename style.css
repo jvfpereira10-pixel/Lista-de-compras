@@ -1,0 +1,28 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: "Inter", sans-serif;;
+    background-color: #F4F5FB;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+#logo {
+    width: 155px;
+    height: 40px;
+    margin-top: 25px;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 7px;
+}
+#logo img{
+    height: 23px;
+    width: 30px;
+}
