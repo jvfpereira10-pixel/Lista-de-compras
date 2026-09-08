@@ -1,14 +1,34 @@
-const input = document.getElementById("item")
+const inputValue = document.getElementById("item")
 const form = document.querySelector("form")
+const lista = document.querySelector(".list-compras")
 
 form.addEventListener("submit", function(event){
     event.preventDefault(event)
 
-    let itemDigitado = input.value.trim()
+    let itemDigitado = inputValue.value.trim()
 
-    
-    console.log(`Você escreveu: ${itemDigitado}`)
+    const li = document.createElement("li")
+    li.classList.add("itens-li")
+
+    const label = document.createElement("label")
+    const checkbox = document.createElement("input")
+    checkbox.type = "checkbox"
+    const span = document.createElement("span")
+    span.textContent = itemDigitado
+    const removeButton = document.createElement("button")
+    removeButton.classList.add("btn-remover")
+    removeButton.textContent = "🗑"
+
+    label.appendChild(checkbox)
+    label.appendChild(span)
+
+    li.appendChild(label)
+    li.appendChild(removeButton)
+
+    lista.appendChild(li)
+
+    console.log(itemDigitado)
 })
 
-input.addEventListener("input", function() {
+inputValue.addEventListener("input", function() {
 })

@@ -92,7 +92,9 @@ h2 {
 #add-btn:hover {
     background-color: #A52C6B;
 }
-
+.list-compras {
+    max-height: 240px;
+}
 .itens-li {
     width: 627px;
     height: 49px;
