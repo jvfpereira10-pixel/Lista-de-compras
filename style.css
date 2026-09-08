@@ -93,7 +93,17 @@ h2 {
     background-color: #A52C6B;
 }
 .list-compras {
-    max-height: 240px;
+    max-height: 250px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding-right: 4px;
+}
+.list-compras::-webkit-scrollbar {
+    width: 6px;
+}
+.list-compras::-webkit-scrollbar-thumb {
+    background-color: #CA3884;
+    border-radius: 10px;
 }
 .itens-li {
     width: 627px;
