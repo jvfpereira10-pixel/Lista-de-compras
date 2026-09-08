@@ -8,6 +8,7 @@ body {
     background-color: #F4F5FB;
     
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     
@@ -25,4 +26,51 @@ body {
 #logo img{
     height: 23px;
     width: 30px;
+}
+.main {
+    width: 627px;
+    height: 444px;
+    
+    margin-top: 62px;
+}
+a {
+    font-size: 14px;
+    line-height: 16px;
+    font-weight: 500;
+    text-decoration: none;
+    color: #CA3884;
+}
+h2 {
+    font-size: 24px;
+    line-height: 32px;
+    font-weight: bold;
+
+    margin-top: 16px;
+    margin-bottom: 44px;
+}
+.item-input {
+    width: 451px;
+    height: 44px;
+    
+    color: #9CA3AF;
+    background-color: #FFFFFF;
+
+    border-radius: 12px;
+    border: 2px solid #D1D5DB;
+    
+    padding: 18px;
+}
+#add-btn {
+    width: 160px;
+    height: 44px;
+    margin-left: 16px;
+
+    color: #FFFFFF;
+    background-color: #CA3884;
+
+    border-radius: 12px;
+    border: none;
+}
+#add-btn:hover {
+    background-color: #A52C6B;
 }
