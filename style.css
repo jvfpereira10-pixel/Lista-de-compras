@@ -28,7 +28,8 @@ body {
     width: 30px;
 }
 .main {
-    width: 627px;
+    width: 100%;
+    max-width: 627px;
     height: 444px;
     
     display: flex;
@@ -51,7 +52,8 @@ h2 {
     margin-bottom: 44px;
 }
 .item-input {
-    width: 451px;
+    width: 70%;
+    max-width: 451px;
     height: 44px;
     
     color: #9CA3AF;
@@ -74,7 +76,8 @@ h2 {
     outline: none;
 }
 #add-btn {
-    width: 160px;
+    width: 30%;
+    max-width: 160px;
     height: 44px;
     margin-left: 16px;
 
@@ -134,4 +137,72 @@ h2 {
     background-color: #FFFFFF;
     border-style: none;
     cursor: pointer;
+}
+@media (max-width: 768px) {
+    .main {  
+            height: auto;
+
+            min-height: 444px;
+            padding: 0 16px;
+    }
+    .itens-li, .item-removed {
+        width: 100%;
+    }
+}
+@media (max-width: 480px) {
+    #logo {
+         margin-top: 16px;
+    }
+    
+    .main {
+        margin-top: 32px;
+        padding: 0 12px;
+     }
+    
+    h2 {
+        font-size: 20px;
+        line-height: 26px;
+        margin-bottom: 28px;
+    }
+    form {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .item-input {
+        width: 100%;
+        max-width: 100%;
+        margin-bottom: 12px;
+    }
+
+    #add-btn {
+        width: 100%;
+        max-width: 100%;
+        margin-left: 0;
+        margin-bottom: 24px;
+    }
+
+    .itens-li {
+        height: auto;
+        min-height: 49px;
+        padding: 10px 12px;
+    }
+
+    .itens-li label span {
+        font-size: 14px;
+    }
+}
+@media (max-width: 360px) {
+    h2 {
+        font-size: 18px;
+        line-height: 24px;
+    }
+
+    #logo h1 {
+        font-size: 16px;
+    }
+
+    .itens-li label span {
+        font-size: 13px;
+    }
 }
