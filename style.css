@@ -93,7 +93,7 @@ h2 {
     background-color: #A52C6B;
 }
 .list-compras {
-    max-height: 250px;
+    max-height: 270px;
     overflow-y: auto;
     overflow-x: hidden;
     padding-right: 4px;
@@ -136,13 +136,6 @@ h2 {
     align-items: center;
     gap: 12px;
 }
-.item-removed {
-    width: 627px;
-    height: 44px;
-    border-radius: 12px;
-    background-color: #C93847;
-    color: #FFFFFF;
-}
 .btn-remover {
     width: 32px;
     height: 32px;
@@ -150,15 +143,55 @@ h2 {
     border-style: none;
     cursor: pointer;
 }
+.item-removed {
+    width: 627px;
+    height: 44px;
+    border-radius: 12px;
+    background-color: #C93847;
+    color: #FFFFFF;
+
+    font-weight: bold;
+    line-height: 16px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    margin-top: 40px;
+    margin-bottom: 20px;
+    padding: 16px;
+
+    opacity: 0;
+    transform: translateY(-10px);
+
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+.item-removed.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+.item-removed button {
+    background-color: #C93847;
+    border-style: none;
+    color: #FFFFFF;
+    
+    font-weight: bold;
+    cursor: pointer;
+}
 @media (max-width: 768px) {
     .main {  
-            height: auto;
-
-            min-height: 444px;
-            padding: 0 16px;
-    }
-    .itens-li, .item-removed {
+        height: auto;
         width: 100%;
+
+        min-height: 444px;
+        padding: 0 16px;
+    }
+    .itens-li {
+        width: 100%;
+    }
+    .item-removed {
+        width: 100%;
+        font-size: 12px;
     }
 }
 @media (max-width: 480px) {
@@ -203,6 +236,10 @@ h2 {
     .itens-li label span {
         font-size: 14px;
     }
+    .item-removed {
+        width: 100%;
+        font-size: 12px;
+    }
 }
 @media (max-width: 360px) {
     h2 {
@@ -216,5 +253,9 @@ h2 {
 
     .itens-li label span {
         font-size: 13px;
+    }
+    .item-removed {
+        width: 100%;
+        font-size: 12px;
     }
 }

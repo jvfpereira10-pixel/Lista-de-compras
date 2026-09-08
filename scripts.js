@@ -41,9 +41,24 @@ lista.addEventListener("click", function(event) {
     if (event.target.classList.contains("btn-remover")) {
         const li = event.target.closest("li")
         li.remove()
+
+        showNotification()
     }
 })
+function showNotification () {
+    const notification = document.querySelector(".item-removed")
 
+    notification.classList.add("show")
+
+    setTimeout(function(){
+        notification.classList.remove("show")
+    }, 1500)
+
+    notification.addEventListener("click", function(event){
+        if (event.target.classList.contains("remove-notification"))
+            notification.classList.remove("show")
+    })
+}
 
 
 inputValue.addEventListener("input", function() {
